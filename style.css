@@ -33,7 +33,7 @@ h1 {
     width: 0px;
     height: 10px;
     border-radius: 15px;
-    animation: progres 1s infinite linear;    
+    animation: progres 1s normal linear;    
 }
 @keyframes progres{
     0%{
