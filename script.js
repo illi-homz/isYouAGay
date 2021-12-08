@@ -3,19 +3,27 @@ const titleLib = {
     main: "Ты главный Гей этой тусовки!!!!",
 };
 
-const main = () => {
+const showTitle = (titleNode) => {
     const urlParams = new URLSearchParams(window.location.search);
     const level = urlParams.get('level');
     const title = titleLib[level];
-
-    const titleNode = document.getElementById('main-title');
 
     if (title) {
         titleNode.innerText = title
     } else {
         titleNode.innerText = titleLib.small
     }
-    
+}
+
+const main = () => {
+    const titleNode = document.getElementById('main-title');
+    const loaderNode = document.getElementById('loader');
+    showTitle(titleNode)
+
+    setTimeout(() => {
+        titleNode.classList.remove('hidden')
+        loaderNode.classList.add('hidden')
+    }, 1000)
 };
 
 document.addEventListener('DOMContentLoaded', main, false);
