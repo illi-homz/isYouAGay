@@ -23,7 +23,7 @@ const main = () => {
     setTimeout(() => {
         titleNode.classList.remove('hidden')
         loaderNode.classList.add('hidden')
-    }, 1000)
+    }, 3000)
 };
 
 document.addEventListener('DOMContentLoaded', main, false);
