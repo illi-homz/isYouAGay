@@ -24,7 +24,7 @@ const main = () => {
         titleNode.classList.remove('hidden')
         loaderNode.classList.add('hidden')
 
-        window.location.replace("http://ya.ru");
+        // window.location.replace("http://ya.ru");
     }, 3000)
 };
 
